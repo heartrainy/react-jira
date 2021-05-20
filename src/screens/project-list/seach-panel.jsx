@@ -7,11 +7,12 @@ function SeachPanel() {
   });
   const [users, setUsers] = useState([]);
   const [list, setList] = useState([]);
-  const [aa, setAa] = useState([])
+  const [aa, setAa] = useState([]);
 
   useEffect(() => {
     fetch("").then(async (response) => {
-      if (response.ok) {console.log(3)
+      if (response.ok) {
+        console.log(4);
         setList(await response.json());
       }
     });
