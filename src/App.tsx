@@ -18,7 +18,7 @@ function App() {
         >
           Learn React
         </a>
-        <div>1</div>
+        <div>2</div>
       </header>
     </div>
   );
