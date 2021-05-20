@@ -1,23 +1,4 @@
-import React, { useEffect, useState } from "react";
-
-function SeachPanel() {
-  const [param, setParam] = useState({
-    name: "",
-    personId: "",
-  });
-  const [users, setUsers] = useState([]);
-  const [list, setList] = useState([]);
-  const [aa, setAa] = useState([]);
-
-  useEffect(() => {
-    fetch("").then(async (response) => {
-      if (response.ok) {
-        console.log(4);
-        setList(await response.json());
-      }
-    });
-  }, [param]);
-
+function SeachPanel({ users, param, setParam }) {
   return (
     <form>
       <div>
@@ -36,6 +17,11 @@ function SeachPanel() {
           onChange={(evt) => setParam({ ...param, personId: evt.target.value })}
         >
           <option value={""}>负责人</option>
+          {users.map((user) => (
+            <option value={user.id} key={user.id}>
+              {user.name}
+            </option>
+          ))}
         </select>
       </div>
     </form>
