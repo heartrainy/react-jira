@@ -11,7 +11,7 @@ function SeachPanel() {
 
   useEffect(() => {
     fetch("").then(async (response) => {
-      if (response.ok) {console.log(2)
+      if (response.ok) {console.log(3)
         setList(await response.json());
       }
     });
