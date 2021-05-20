@@ -6,15 +6,15 @@ function SeachPanel() {
     personId: "",
   });
   const [users, setUsers] = useState([]);
-  const [list, setList] = useState([])
+  const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch('').then(async response => {
+    fetch("").then(async (response) => {
       if (response.ok) {
-        setList(await response.json())
+        setList(await response.json());
       }
-    })
-  }, [param])
+    });
+  }, [param]);
 
   return (
     <form>
