@@ -1,4 +1,21 @@
-function SeachPanel({ users, param, setParam }) {
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  title: string;
+  organization: string;
+}
+
+interface SeachPanelProps {
+  users: User[];
+  param: {
+    name: string;
+    personId: string;
+  };
+  setParam: (param: SeachPanelProps["param"]) => void;
+}
+
+function SeachPanel({ users, param, setParam }: SeachPanelProps) {
   return (
     <form>
       <div>

@@ -4,7 +4,6 @@ import SearchPanel from "./seach-panel";
 import List from "./list";
 import { cleanObject, useDebounce, useMount } from "utils";
 
-console.log(qs);
 const apiUrl = process.env.REACT_APP_API_URL;
 
 function ProjectListScreen() {

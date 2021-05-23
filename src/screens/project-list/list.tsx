@@ -1,4 +1,19 @@
-function List({ list, users }) {
+import { User } from "screens/project-list/seach-panel";
+
+interface Project {
+  id: string;
+  name: string;
+  personId: string;
+  pin: boolean;
+  organization: string;
+}
+
+interface ListProps {
+  list: Project[];
+  users: User[];
+}
+
+function List({ list, users }: ListProps) {
   return (
     <table>
       <thead>
